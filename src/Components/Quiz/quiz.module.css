@@ -1,0 +1,14 @@
+.quiz {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz__quests {
+    background: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+
+.quiz__item {
+    font-size: 22px;
+}
