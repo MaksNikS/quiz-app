@@ -16,3 +16,7 @@
     background: blanchedalmond;
     padding: 10px;
 }
+
+.card__question:hover {
+    background: cornsilk;
+}

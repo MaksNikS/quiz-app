@@ -25,7 +25,7 @@ function App() {
 
   const fetchData = async () => {
     setLoading(true);
-    const data = await fetch(`https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10f&category=Linux`);
+    const data = await fetch(`https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=5&category=Linux`);
 
     if (data) {
       const json = await data.json();
@@ -40,12 +40,14 @@ function App() {
 
   return (
     <div className="App">
-      APP QUIZ
-      {loading ? <Preloader /> : (
-        quizData && (
-          <Quiz quizData={quizData} />
-        )
-      )}
+      <h3>APP QUIZ</h3>
+      <div className="Quiz">
+        {loading ? <Preloader /> : (
+          quizData && (
+            <Quiz quizData={quizData} />
+          )
+        )}
+      </div>
     </div>
   );
 }
